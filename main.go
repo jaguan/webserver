@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	a := App{}
-	a.Initialize()
-	a.Run(8080)
+	app := App{}
+	app.Initialize()
+	app.Run(8080)
 }

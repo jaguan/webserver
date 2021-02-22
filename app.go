@@ -19,7 +19,9 @@ func (a *App) Initialize() {
 	fmt.Println("[APP] Initialize")
 
 	a.Router = mux.NewRouter().StrictSlash(true)
-	a.Router.HandleFunc("/", handler)
+
+	a.Router.HandleFunc("/", IndexHandler)
+	a.Router.HandleFunc("/hello", HelloHandler)
 }
 
 // Run is ...
