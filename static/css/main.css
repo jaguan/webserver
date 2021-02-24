@@ -2,19 +2,19 @@ nav {
     border-bottom: 1px solid black;
 }
 
-.crumbs ol {
+.navbar ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.crumb {
+.navitem {
     display: inline-block;
 }
 
-.crumb a::after {
+.navitem a::after {
     display: inline-block;
     color: #000;
-    content: '>';
+    content: '/';
     font-size: 80%;
     font-weight: bold;
     padding: 0 3px;
