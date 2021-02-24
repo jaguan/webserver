@@ -20,8 +20,11 @@ func (a *App) Initialize() {
 
 	a.Router = mux.NewRouter().StrictSlash(true)
 
+	// a.Router.Handle("/", http.FileServer(http.Dir("./static/")))
+
 	a.Router.HandleFunc("/", IndexHandler)
 	a.Router.HandleFunc("/hello", HelloHandler)
+	a.Router.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
 }
 
 // Run is ...
